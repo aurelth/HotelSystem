@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace HotelSystem
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+            pnlLogin.Location = new Point((this.Width / 2) - 166, (this.Height / 2) - 170);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
