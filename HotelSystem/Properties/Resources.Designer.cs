@@ -79,5 +79,15 @@ namespace HotelSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Imagem_Completa_sem_Texto_no_botão {
+            get {
+                object obj = ResourceManager.GetObject("Login Imagem Completa sem Texto no botão", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

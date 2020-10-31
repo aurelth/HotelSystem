@@ -20,11 +20,18 @@ namespace HotelSystem
         private void Login_Load(object sender, EventArgs e)
         {
             pnlLogin.Location = new Point((this.Width / 2) - 166, (this.Height / 2) - 170);
+            btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(21, 114, 160);
+            btnLogin.FlatAppearance.MouseDownBackColor = Color.FromArgb(8, 72, 103);
+            txtUsuario.ForeColor = Color.FromArgb(36, 113, 163);
+            txtSenha.ForeColor = Color.FromArgb(255, 195, 0);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

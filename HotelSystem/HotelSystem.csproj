@@ -86,5 +86,8 @@
   <ItemGroup>
     <None Include="Resources\Login Imagem Completa.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Imagem Completa sem Texto no botão.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
