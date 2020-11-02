@@ -33,5 +33,31 @@ namespace HotelSystem
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if ((txtUsuario.Text.Length <= 0) && (txtSenha.Text.Length <= 0))
+            {
+                MessageBox.Show("Informe o Usuário e a Senha");
+                txtUsuario.Focus();
+                return;
+            }
+
+            else if(txtUsuario.Text.Length <= 0)
+            {
+                MessageBox.Show("Informe o Usuário");
+                txtUsuario.Focus();
+                return;
+            }
+
+            else
+            {
+                MessageBox.Show("Informe a Senha");
+                txtUsuario.Focus();
+                return;
+            }
+
+            //Escrever aqui o código para Login
+        }
     }
 }
