@@ -15,11 +15,13 @@ namespace HotelSystem
         public FrmLogin()
         {
             InitializeComponent();
+            pnlLogin.Visible = false;
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             pnlLogin.Location = new Point((this.Width / 2) - 166, (this.Height / 2) - 170);
+            pnlLogin.Visible = true;
             btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(21, 114, 160);
             btnLogin.FlatAppearance.MouseDownBackColor = Color.FromArgb(8, 72, 103);
             txtUsuario.ForeColor = Color.FromArgb(36, 113, 163);
@@ -36,6 +38,19 @@ namespace HotelSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            ChamarLogin();
+        }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ChamarLogin();
+            }
+        }
+
+        private void ChamarLogin()
+        {
             if ((txtUsuario.Text.Length <= 0) && (txtSenha.Text.Length <= 0))
             {
                 MessageBox.Show("Informe o Usuário e a Senha");
@@ -43,21 +58,23 @@ namespace HotelSystem
                 return;
             }
 
-            else if(txtUsuario.Text.Length <= 0)
+            else if (txtUsuario.Text.Length <= 0)
             {
                 MessageBox.Show("Informe o Usuário");
                 txtUsuario.Focus();
                 return;
             }
 
-            else
+            else if (txtSenha.Text.Length <= 0)
             {
                 MessageBox.Show("Informe a Senha");
                 txtUsuario.Focus();
                 return;
             }
 
-            //Escrever aqui o código para Login
+            FrmMenu form = new FrmMenu();
+            this.Hide();
+            form.Show();
         }
     }
 }
